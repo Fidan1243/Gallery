@@ -77,7 +77,8 @@ namespace WpfApp10
 
         private void mage_DragEnter(object sender, DragEventArgs e)
         {
-
+            string[] file = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            ImagesG.Add(new TheImages { ImagePath = file[0] });
         }
     }
 }

@@ -44,15 +44,15 @@ namespace WpfApp10
                     {
                         string a2 = images[index + 1].ImagePath;
                         int cn = index + 1;
-                        name1.Source = new BitmapImage(new Uri($@"{a2}",UriKind.Relative));
+                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.RelativeOrAbsolute));
                         index += 1;
                     }
                     else
                     {
                         index = 0;
                         string a2 = images[index].ImagePath;
-                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.Relative));
-                        
+                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.RelativeOrAbsolute));
+
                     }
                 }
                 else
@@ -60,14 +60,14 @@ namespace WpfApp10
                     if (index <= images.Count && index > 0)
                     {
                         string a2 = images[index - 1].ImagePath;
-                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.Relative));
+                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.RelativeOrAbsolute));
                         index -= 1;
                     }
                     else
                     {
                         index = images.Count-1;
                         string a2 = images[index].ImagePath;
-                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.Relative));
+                        name1.Source = new BitmapImage(new Uri($@"{a2}", UriKind.RelativeOrAbsolute));
 
                     }
                 }
