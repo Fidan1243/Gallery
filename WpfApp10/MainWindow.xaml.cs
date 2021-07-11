@@ -72,6 +72,7 @@ namespace WpfApp10
             var win2 = new W2();
             win2.images = ImagesG.ToList();
             win2.index = (sender as ListBox).SelectedIndex;
+            win2.firstlc = ((sender as ListBox).SelectedItem as TheImages).ImagePath;
             win2.Show();
         }
 

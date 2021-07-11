@@ -28,11 +28,13 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Image Name="name1" Source="{Binding images[index].ImagePath}"></Image>
-        <Grid Grid.Row="1" Background="AliceBlue">
+        <Button Click="Back_Click" Name="Back" Style="{StaticResource RoundCorner}" Height="30" Margin="0,0,690,0" Width="60" Grid.Row="0" FontSize="25" Content="◀"></Button>
+        <Image Grid.Row="1" Name="name1" Source="{Binding firstlc}"></Image>
+        <Grid Grid.Row="2" Background="AntiqueWhite">
             <Button Click="PlayPause_Click" Name="PlayPause" Style="{StaticResource RoundCorner}" Height="{StaticResource PauseBtH}" Width="{StaticResource PauseBtW}" Grid.Row="1" FontSize="30" Content="▶⏸"></Button>
             <Button Click="Prev_Click" Name="Prev" Style="{StaticResource RoundCorner}" Height="{StaticResource OthBtH}" Margin="0,0,250,0" Width="{StaticResource OthBtW}" Grid.Row="1" FontSize="25" Content="⏮"></Button>
             <Button Click="Prev_Click" Name="Next" Style="{StaticResource RoundCorner}" Height="{StaticResource OthBtH}" Margin="250,0,0,0" Width="{StaticResource OthBtW}" Grid.Row="1" FontSize="25" Content="⏭"></Button>
